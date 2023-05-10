@@ -85,7 +85,7 @@ div {
 }
 
 .main-wrapper {
-    overflow: hidden;
+    /* overflow: hidden; */
     height: 100%;
     opacity: 0;
 }
@@ -93,9 +93,6 @@ div {
 .animate-word {
     margin: 0;
     color: rgb(142, 139, 139);
-}
-
-p {
     overflow: hidden;
 }
 
@@ -140,7 +137,7 @@ p {
     margin-top: 2.5rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
     .hidden-ss {
         display: none !important;
     }
@@ -150,10 +147,10 @@ p {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     body {
         padding-top: 2.5rem;
-        font-size: 2.3vw;
+        font-size: 0.8rem;
     }
 
     header {
@@ -164,11 +161,13 @@ p {
         flex-direction: column;
         text-align: right;
         line-height: 1.5;
+        font-size: 0.8rem;
     }
 
     .home {
-        font-size: 20px;
+        font-size: 1.2rem;
         flex-direction: column;
+        text-align: left;
         line-height: 1.5;
     }
 
@@ -183,5 +182,39 @@ p {
     a#thoughts {
         margin-right: 0;
         margin-left: 0;
+    }
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+
+    .home {
+        font-size: 20px;
+        flex-direction: column;
+        line-height: 1.8;
+        text-align: left;
+    }
+
+    nav {
+        flex-direction: column;
+        text-align: right;
+        line-height: 1.5;
+    }
+
+    header {
+        height: 100px;
+    }
+
+    .content-main-div {
+        margin-top: 1.5rem;
+    }
+
+    html {
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
+        /* More properties for a fixed height ... */
     }
 }
