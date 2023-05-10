@@ -1,0 +1,141 @@
+html {
+    font-size: 18px;
+    display: block;
+}
+
+html, body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-feature-settings: normal;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* * {
+    box-sizing: border-box;
+    border-style: solid;
+} */
+
+body {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5rem;
+}
+
+.header-wrapper, .main-wrapper {
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.header-div {
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    height: 60px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.home {
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    line-height: 2;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+a#thoughts {
+    margin-right: 0.8rem;
+    margin-left: 0.8rem;
+}
+
+.link-hover:hover {
+    color: black;
+}
+
+nav {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    color: rgb(142, 139, 139);
+}
+
+div {
+    display: block;
+}
+
+.main-wrapper {
+    overflow: hidden;
+    height: 100%;
+    opacity: 0;
+}
+
+.animate-word {
+    margin: 0;
+    color: rgb(142, 139, 139);
+}
+
+p {
+    overflow: hidden;
+}
+
+.word-list {
+    display: inline-block;
+    display: none;
+    font-weight: 700;
+    color: black;
+    text-decoration: None;
+}
+
+.change-word {
+    display: inline-block;
+    animation: push-up .5s ease;
+}
+
+.change-word2 {
+    animation: push-out .5s ease;
+}
+
+.fade-in {
+    animation: fade-in 1s ease;
+    opacity: 1;
+}
+
+@keyframes push-up {
+    0%   { transform: translateY(100%); }
+    100% { transform: translateY(0%); }
+}
+
+@keyframes push-out {
+    0%   { transform: translateY(0%); }
+    100% { transform: translateY(-100%); }
+}
+
+@keyframes fade-in {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.content-main-div {
+    margin-top: 2.5rem;
+}
