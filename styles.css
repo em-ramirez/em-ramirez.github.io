@@ -139,3 +139,47 @@ p {
 .content-main-div {
     margin-top: 2.5rem;
 }
+
+@media (min-width: 768px) {
+    .hidden-ss {
+        display: none !important;
+    }
+
+    .hidden-nav-break {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 2.5rem;
+        font-size: 1.8vw;
+    }
+
+    header {
+        height: 90px;
+    }
+
+    nav {
+        flex-direction: column;
+        text-align: right;
+    }
+
+    .home {
+        font-size: 20px;
+        flex-direction: column;
+    }
+
+    .link-hover {
+        display: inline;
+    }
+
+    .header-wrapper, .main-wrapper {
+        width: 60%;
+    }
+
+    a#thoughts {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
