@@ -6,10 +6,85 @@
         <title>Eman</title>
         <link rel="stylesheet" href="styles.css">
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src= "script.js"></script>
     </head>
-
-    <body>
-        <h1 class="h1-resume">Hmm... This one still has work to go.</h1>
-        <p style="text-align: center; color: rgb(51, 194, 149);"><a href="index.html">Go back? Click me!</a></p>
+    <body id="resume">
+        <div class="header-div">
+            <header class="header-wrapper">
+                <h1 class="home">
+                    <a href="/resume.html"><span class="home-name"></span></a>
+                </h1>
+                <nav>
+                    <a id="index" href="about.html" class="link-hover">About</a>
+                    <br class="hidden-nav-break">
+                    <a id="thoughts" href="thoughts.html" class="link-hover">Thoughts</a>
+                    <br class="hidden-nav-break">
+                    <a id="resume" href="index.html" class="link-hover">Home</a>
+                </nav>
+            </header>
+        </div>
+        <main class="main-wrapper">
+            <div class="content-main-div-resume">
+                <h3>
+                    Education
+                </h3>
+                <p id="resume-content-education">
+                    Harvard University
+                    <span class="text-gray align-right"> 2019 - Current</span>
+                    <br>
+                    <span class="text-gray font-small"><em>A.B. in Computer Science</em></span> 
+                </p>
+                <h4 class="font-medium mb-small mt-normal" id="education">
+                    Relevant Coursework:
+                </h4>
+                <ul id="class-list" class="font-md-small">
+                    <li>
+                        CS 145: Computer Networks
+                    </li>
+                    <li>
+                        CS 126: Differential Privacy
+                    </li>
+                    <li>
+                        CS 124: Data Structures and Algorithms
+                    </li>
+                    <li>
+                        CS 181: Machine Learning
+                    </li>
+                    <li>
+                        CS 182: Artificial Intelligence
+                    </li>
+                    <li>
+                        CS 121: Theory of Computation
+                    </li>
+                    <li>
+                        CS 51: Computation Abstraction and Design
+                    </li>
+                    <li>
+                        CS 61: Systems Programming and Machine Organization
+                    </li>
+                    <li>
+                        CS 141: Computing Hardware
+                    </li>
+                    <li>
+                        CS 20: Discrete Mathematics
+                    </li>
+                    <li>
+                        STAT 110: Statistics and Probability
+                    </li>
+                    <li>
+                        MATH 21b: Linear Algebra
+                    </li>
+                </ul>
+                <h4 class="font-medium mb-small mt-normal" id="education">
+                    Course assistant:
+                </h4>
+                <p class="font-md-small mb-small" id="resume-teaching">
+                    Math 1b (Calculus II) — 5 Semesters, Spring 2021 - Spring 2023
+                </p>
+                <p style="margin-top: 0;" class="font-small mt-small" id="resume-teaching">
+                    description here...
+                </p>
+            </div>
+        </main>
     </body>
 </html>

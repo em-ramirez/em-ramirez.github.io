@@ -61,7 +61,7 @@ header {
 }
 
 h1 {
-    text-align: center;
+    text-align: left;
     line-height: 2;
 }
 
@@ -118,7 +118,7 @@ div {
 }
 
 .fade-in {
-    animation: fade-in 1s ease;
+    animation: fade-in 0.8s ease;
     opacity: 1;
 }
 
@@ -241,4 +241,76 @@ img {
 
 .content-main-div-about {
     margin-top: 11rem;
+}
+
+h3 {
+    text-align: center;
+    line-height: 1rem;
+}
+
+#resume-content-education {
+    text-align: left;
+    line-height: 0.1rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.8rem;
+}
+
+.text-gray {
+    color: var(--light-gray);
+}
+
+.font-small {
+    font-size: small;
+}
+
+.align-right {
+    float: right;
+}
+
+br {
+    display: block;
+    content: " ";
+    margin-top: 1rem;
+}
+
+.small-break {
+    margin-top: 0.5rem;
+    display: block;
+    content: " ";
+}
+
+.font-medium {
+    font-size: medium;
+    font-weight: 500;
+}
+
+.font-md-small {
+    font-size: 0.9em;
+    font-weight: 300;
+}
+
+.font-small {
+    font-size: small;
+}
+
+.mb-small {
+    margin-bottom: 0.3rem;
+}
+
+.mt-nromal {
+    margin-top: 1rem;
+}
+
+.mt-small {
+    margin-top: 0.3rem;
+}
+
+#class-list {
+    margin: 0;
+    padding-left: 1.3rem;
+}
+
+#resume-teaching {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
 }

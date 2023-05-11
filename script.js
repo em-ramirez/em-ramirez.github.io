@@ -51,18 +51,20 @@ async function typeName(name, remove, ref) {
 
     let i = 0;
     while (i < letters.length) {
-        await pause(80);
+        await pause(50);
         $(ref).append(letters[i]);
         i++;
     }
 
     if (remove == true) {
-        await pause(2000);
+        await pause(1000);
         deleteName(ref);
     } else {
-        await pause(700);
+        await pause(200);
         document.querySelector(".main-wrapper").classList.add("fade-in");
-        executeWordChange();
+        if ($('body').is('#index')) {
+            executeWordChange();
+        }
         return;
     }
 
@@ -71,6 +73,11 @@ async function typeName(name, remove, ref) {
 }
 
 $(document).ready(function() {
-    typeName("Hey, I'm Emmanuel", true,".home-name");
+    if ($('body').is('#index')) {
+        typeName("Hey, I'm Emmanuel", true, ".home-name");
+    }
+    else if ($('body').is('#resume')) {
+        typeName("Resume", false, ".home-name");
+    }
 });
   
