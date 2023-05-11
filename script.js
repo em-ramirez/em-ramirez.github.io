@@ -31,13 +31,17 @@ function executeWordChange() {
 
 async function deleteName(ref) {
     const sentence = $(ref).text();
-    const letters = sentence.split("");
+    const words = sentence.split(" ");
+    const nameLetters = words[words.length - 1].split("");
+    words.pop();
 
     let i = 0;
-    while (letters.length > 0) {
+    while (nameLetters.length > 0) {
         await pause(80);
-        letters.pop();
-        $(ref).html(letters.join(""));
+        nameLetters.pop();
+        words.push(nameLetters.join(""))
+        $(ref).text(words.join(" "));
+        words.pop();
     }
 }
 
@@ -67,6 +71,6 @@ async function typeName(name, remove, ref) {
 }
 
 $(document).ready(function() {
-    typeName("Emmanuel", true,".home-name");
+    typeName("Hey, I'm Emmanuel", true,".home-name");
 });
   

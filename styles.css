@@ -1,3 +1,7 @@
+:root {
+    --light-gray: rgb(142, 139, 139);
+}
+
 html {
     font-size: 18px;
     display: block;
@@ -23,7 +27,7 @@ body {
     padding-top: 5rem;
 }
 
-.header-wrapper, .main-wrapper {
+.header-wrapper, .main-wrapper, .main-wrapper-about {
     width: 45%;
     margin-left: auto;
     margin-right: auto;
@@ -49,6 +53,7 @@ header {
 }
 
 .home {
+    overflow: hidden;
     font-weight: bold;
     font-size: 1.5rem;
     line-height: 2rem;
@@ -77,7 +82,7 @@ a#thoughts {
 nav {
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
-    color: rgb(142, 139, 139);
+    color: var(--light-gray);
 }
 
 div {
@@ -85,14 +90,13 @@ div {
 }
 
 .main-wrapper {
-    /* overflow: hidden; */
     height: 100%;
     opacity: 0;
 }
 
 .animate-word {
     margin: 0;
-    color: rgb(142, 139, 139);
+    color: var(--light-gray);
     overflow: hidden;
 }
 
@@ -215,6 +219,26 @@ div {
     html {
         overflow: scroll;
         -webkit-overflow-scrolling: touch;
-        /* More properties for a fixed height ... */
     }
+}
+
+img {
+    width: 200px;
+    height: 10%;
+    border-radius: 0 50% 50% 50%;
+    border: 2px solid var(--light-gray);
+    object-fit: cover;
+    z-index: -1;
+}
+
+#image-link {
+    margin-top: 0px;
+}
+
+.main-wrapper-about {
+    height: 100%;
+}
+
+.content-main-div-about {
+    margin-top: 11rem;
 }
