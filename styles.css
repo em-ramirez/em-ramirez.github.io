@@ -14,9 +14,12 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    padding-bottom: 300px;
+    padding-bottom: 20%;
 }
 
+body#resume {
+    padding-bottom: 50%;
+}
 /* * {
     box-sizing: border-box;
     border-style: solid;
@@ -327,4 +330,8 @@ br {
 .experience-section {
     margin-top: 2.5rem;
     margin-bottom: 1rem;
+}
+
+#experience-section-end {
+    padding-bottom: 25%;
 }
