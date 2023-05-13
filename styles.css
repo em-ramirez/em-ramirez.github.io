@@ -293,6 +293,32 @@ div {
     }
 } 
 
+@media only screen 
+  and (min-device-width: 390px)
+  and (max-device-width: 1000px)
+  and (-webkit-device-pixel-ratio: 2) {
+    nav {
+        flex-direction: column;
+        text-align: right;
+        line-height: 0.6rem;
+        font-size: 0.8rem;
+        margin-top: 0;
+    }
+
+    #resume-content-education {
+        text-align: left;
+        line-height: 1rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1.8rem;
+    }
+
+    #harvard-break {
+        display: block;
+        content: " ";
+        margin-top: 0;
+    }
+} 
+
 img {
     width: 200px;
     height: 10%;
