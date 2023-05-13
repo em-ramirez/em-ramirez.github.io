@@ -2,6 +2,11 @@
     --light-gray: rgb(142, 139, 139);
 }
 
+/* * {
+    box-sizing: border-box;
+    border-style: solid;
+} */
+
 html {
     font-size: 18px;
     display: block;
@@ -20,10 +25,6 @@ html, body {
 body#resume {
     padding-bottom: 50%;
 }
-/* * {
-    box-sizing: border-box;
-    border-style: solid;
-} */
 
 body {
     display: flex;
@@ -181,6 +182,7 @@ div {
 
     .link-hover {
         display: inline;
+
     }
 
     .header-wrapper, .main-wrapper {
@@ -194,22 +196,50 @@ div {
 }
 
 @media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3)
+  and (min-device-width: 350px) 
+  and (max-device-width: 900px) 
   and (orientation: portrait) { 
 
-    .home {
+    .header-wrapper, .main-wrapper, .main-wrapper-about {
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    
+    .home .home-name {
         font-size: 20px;
         flex-direction: column;
-        line-height: 1.8;
+        line-height: 0;
         text-align: left;
+    }
+
+    .home {
+        vertical-align: top;
+    }
+
+    #resume-teaching {
+        margin-top: 1rem;
+        font-size: 1em;
+        flex-direction: column;
     }
 
     nav {
         flex-direction: column;
         text-align: right;
-        line-height: 1.5;
+        line-height: 0.5rem;
+        margin-top: 0.3rem;
+    }
+
+    .img-wrapper {
+        margin-top: 0.3rem;
+    }
+
+    .hidden-ss {
+        display: none;
     }
 
     header {
@@ -235,6 +265,10 @@ img {
     z-index: -1;
 }
 
+.img-wrapper {
+    margin-top: 0.2rem;
+}
+
 #image-link {
     margin-top: 0px;
 }
@@ -257,6 +291,10 @@ h3 {
     line-height: 0.1rem;
     margin-top: 2.5rem;
     margin-bottom: 1.8rem;
+}
+
+#resume-teaching {
+    margin-top: 0;
 }
 
 .text-gray {
