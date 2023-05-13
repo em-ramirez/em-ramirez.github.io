@@ -146,6 +146,13 @@ div {
     margin-top: 2.5rem;
 }
 
+#resume-content-education {
+    text-align: left;
+    line-height: 0.1rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.8rem;
+}
+
 @media (min-width: 1000px) {
     .hidden-ss {
         display: none !important;
@@ -166,10 +173,14 @@ div {
         height: 90px;
     }
 
+    .hidden-ss {
+        display: none;
+    }
+
     nav {
         flex-direction: column;
         text-align: right;
-        line-height: 1.5;
+        line-height: 0.5rem;
         font-size: 0.8rem;
     }
 
@@ -193,11 +204,11 @@ div {
         margin-right: 0;
         margin-left: 0;
     }
-}
+}  
 
 @media only screen 
   and (min-device-width: 350px) 
-  and (max-device-width: 900px) 
+  and (max-device-width: 1000px) 
   and (orientation: portrait) { 
 
     .header-wrapper, .main-wrapper, .main-wrapper-about {
@@ -256,6 +267,32 @@ div {
     }
 }
 
+@media only screen 
+  and (min-device-width: 390px)
+  and (max-device-width: 1000px)
+  and (-webkit-device-pixel-ratio: 3) {
+    nav {
+        flex-direction: column;
+        text-align: right;
+        line-height: 1.4rem;
+        font-size: 0.8rem;
+        margin-top: 0;
+    }
+
+    #harvard-break {
+        display: block;
+        content: " ";
+        margin-top: 5rem;
+    }
+
+    #resume-content-education {
+        text-align: left;
+        line-height: 1rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1.8rem;
+    }
+} 
+
 img {
     width: 200px;
     height: 10%;
@@ -284,13 +321,6 @@ img {
 h3 {
     text-align: center;
     line-height: 1rem;
-}
-
-#resume-content-education {
-    text-align: left;
-    line-height: 0.1rem;
-    margin-top: 2.5rem;
-    margin-bottom: 1.8rem;
 }
 
 #resume-teaching {
