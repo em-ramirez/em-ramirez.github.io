@@ -63,6 +63,7 @@ async function typeName(name, remove, ref) {
         await pause(200);
         document.querySelector(".main-wrapper").classList.add("fade-in");
         if ($('body').is('#index')) {
+            document.querySelector("#index").classList.add("svg");
             executeWordChange();
         }
         return;
