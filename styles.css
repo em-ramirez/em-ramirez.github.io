@@ -186,8 +186,11 @@ div {
 
 @media (max-width: 1000px) {
     body {
-        padding-top: 2.5rem;
         font-size: 0.8rem;
+    }
+
+    .header-wrapper {
+        padding-top: 2.5rem;
     }
 
     header {
