@@ -23,7 +23,7 @@ function executeWordChange() {
             idx++;
         }
         
-        setTimeout(changeWord, 3000);
+        setTimeout(changeWord, 2500);
     }  
     
     changeWord();
