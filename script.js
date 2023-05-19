@@ -1,7 +1,9 @@
+// function pause(X) => pause for X millisecond input
 function pause(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+// function executeWordChange() => cycle words in index.html
 function executeWordChange() {
     const words = document.querySelector(".animate-word").children,
     textOutTimer = 2800;
@@ -29,9 +31,12 @@ function executeWordChange() {
     changeWord();
 }
 
+// function deleteName(X) => delete words located at html reference X
 async function deleteName(ref) {
     const sentence = $(ref).text();
     const words = sentence.split(" ");
+
+    // get last word since that corresponds to the name
     const nameLetters = words[words.length - 1].split("");
     words.pop();
 
@@ -45,6 +50,7 @@ async function deleteName(ref) {
     }
 }
 
+// function typeName(A, B, C) => type name A into html reference C. Remove it based on flag B
 async function typeName(name, remove, ref) {
     await pause(500);
     const letters = name.split("");
@@ -64,6 +70,7 @@ async function typeName(name, remove, ref) {
         document.querySelector(".main-wrapper").classList.add("fade-in");
         if ($('body').is('#index')) {
             executeWordChange();
+            // not-so-strict check to see if user is on computer vs. phone
             if (screen.orientation.type == 'landscape-primary') {
                 document.querySelector("#index").classList.add("svg");
             }
@@ -84,7 +91,7 @@ $(document).ready(function() {
     }
     else if ($('body').is('#about')) {
         if (screen.orientation.type == 'landscape-primary') {
-            document.querySelector("#about").classList.add("svg-about");
+            document.querySelector("#about").classList.add("svg");
         }
     }
     else if ($('body').is('#thoughts')) {
