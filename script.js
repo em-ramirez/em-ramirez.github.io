@@ -82,5 +82,15 @@ $(document).ready(function() {
     else if ($('body').is('#resume')) {
         typeName("Resume", false, ".home-name");
     }
+    else if ($('body').is('#about')) {
+        if (screen.orientation.type == 'landscape-primary') {
+            document.querySelector("#about").classList.add("svg-about");
+        }
+    }
+    else if ($('body').is('#thoughts')) {
+        if (screen.orientation.type == 'landscape-primary') {
+            document.querySelector("#thoughts").classList.add("svg");
+        }
+    }
 });
   
