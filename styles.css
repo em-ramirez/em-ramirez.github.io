@@ -87,7 +87,7 @@ a {
     text-decoration: inherit;
 }
 
-a#nav-thoughts {
+a#nav-about {
     margin-right: 0.8rem;
     margin-left: 0.8rem;
 }
@@ -229,7 +229,7 @@ div {
         width: 60%;
     }
 
-    a#nav-thoughts {
+    a#nav-about {
         margin-right: 0;
         margin-left: 0;
     }
