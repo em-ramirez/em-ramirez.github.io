@@ -3,6 +3,7 @@
     --soft-blue: rgb(94, 162, 199);
 }
 
+/* For seeing grid layout */
 /* * {
     box-sizing: border-box;
     border-style: solid;
@@ -484,4 +485,22 @@ br {
 .underline:hover:after {
     transform: scaleX(1);
     transform-origin: 0 50%;
+}
+
+.social_link#linkedIn:hover {
+    color: rgb(45, 100, 188);
+}
+
+.social_link#spotify:hover {
+    color: rgb(101, 212, 110);
+}
+
+.social_link#strava:hover {
+    color: rgb(233, 95, 42);
+}
+
+.social_links_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
