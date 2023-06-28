@@ -67,12 +67,16 @@ async function typeName(name, remove, ref) {
         deleteName(ref);
     } else {
         await pause(200);
-        document.querySelector(".main-wrapper").classList.add("fade-in");
+        
+        $(document).ready(function () {
+            $('.fade-in-wrapper').addClass('fade-in'); 
+        });
+
         if ($('body').is('#index')) {
             executeWordChange();
             // not-so-strict check to see if user is on computer vs. phone
             if (screen.orientation.type == 'landscape-primary') {
-                document.querySelector("#index").classList.add("svg");
+                document.querySelector("body#index").classList.add("svg");
             }
         }
         return;
@@ -92,11 +96,6 @@ $(document).ready(function() {
     else if ($('body').is('#about')) {
         if (screen.orientation.type == 'landscape-primary') {
             document.querySelector("#about").classList.add("svg");
-        }
-    }
-    else if ($('body').is('#thoughts')) {
-        if (screen.orientation.type == 'landscape-primary') {
-            document.querySelector("#thoughts").classList.add("svg");
         }
     }
 });

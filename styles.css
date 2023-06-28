@@ -41,7 +41,7 @@ body {
     flex-direction: column;
 }
 
-.header-wrapper, .main-wrapper, .main-wrapper-about {
+.header-wrapper, .main-wrapper {
     width: 50%;
     margin-left: auto;
     margin-right: auto;
@@ -88,9 +88,8 @@ a {
     text-decoration: inherit;
 }
 
-a#nav-about {
+a#nav-index {
     margin-right: 0.8rem;
-    margin-left: 0.8rem;
 }
 
 nav {
@@ -105,12 +104,11 @@ div {
 
 .main-wrapper {
     height: 100%;
-    opacity: 0;
+    opacity: 1;
 }
 
-.main-wrapper-about {
-    height: 100%;
-    /* opacity: 0; */
+.fade-in-wrapper {
+    opacity: 0;
 }
 
 .animate-word {
@@ -137,13 +135,8 @@ div {
 }
 
 .fade-in {
-    animation: fade-in 0.8s ease;
+    animation: fade-in 1s ease;
     opacity: 1;
-}
-
-.fade-in-animation {
-    animation: fade-in-animation 0.8s ease;
-    opacity: 0.5;
 }
 
 @keyframes push-up {
@@ -161,11 +154,6 @@ div {
     100% { opacity: 1; }
 }
 
-@keyframes fade-in-animation {
-    0%   { opacity: 0; }
-    100% { opacity: 0.5; }
-}
-
 .content-main-div {
     margin-top: 2.5rem;
 }
@@ -179,7 +167,7 @@ div {
 
 /* handling width for larger screens */
 @media (min-width: 1450px) {
-    .header-wrapper, .main-wrapper, .main-wrapper-about {
+    .header-wrapper, .main-wrapper {
         width: 40%;
     }
 }
@@ -229,11 +217,6 @@ div {
     .header-wrapper, .main-wrapper {
         width: 60%;
     }
-
-    a#nav-about {
-        margin-right: 0;
-        margin-left: 0;
-    }
 }  
 
 /* handling layout on most phones */
@@ -242,7 +225,7 @@ div {
   and (max-device-width: 1000px) 
   and (orientation: portrait) { 
 
-    .header-wrapper, .main-wrapper, .main-wrapper-about {
+    .header-wrapper, .main-wrapper {
         width: 85%;
         margin-left: auto;
         margin-right: auto;
@@ -311,10 +294,6 @@ div {
         margin-top: 0;
     }
 
-    body#about {
-        margin-bottom: 50% !important;
-    }
-
     #harvard-break {
         display: block;
         content: " ";
@@ -371,10 +350,6 @@ img {
 
 #image-link {
     margin-top: 0px;
-}
-
-.content-main-div-about {
-    margin-top: 11rem;
 }
 
 h3 {
@@ -502,5 +477,20 @@ br {
 .social_links_container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    margin-top: 5rem;
 }
+
+.index_footer {
+    margin-top: 5rem;
+ }
+
+.social_link {
+    color: #000;
+    text-decoration: underline;
+ }
+
+ #spotify {
+    padding-left: 2rem;
+    padding-right: 2rem;
+ }
