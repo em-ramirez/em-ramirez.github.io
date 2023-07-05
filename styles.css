@@ -188,6 +188,10 @@ div {
         font-size: 0.8rem;
     }
 
+    footer {
+        padding-bottom: 5rem;
+    }
+
     .header-wrapper {
         padding-top: 2.5rem;
     }
@@ -256,10 +260,6 @@ div {
         flex-direction: column;
         text-align: right;
         line-height: 0.5rem;
-        margin-top: 0.3rem;
-    }
-
-    .img-wrapper {
         margin-top: 0.3rem;
     }
 
@@ -335,23 +335,6 @@ div {
     }
 } 
 
-img {
-    width: 200px;
-    height: 10%;
-    border-radius: 50% 50% 50% 50%;
-    border: 2px solid var(--soft-blue);
-    object-fit: cover;
-    z-index: -1;
-}
-
-.img-wrapper {
-    margin-top: 0.2rem;
-}
-
-#image-link {
-    margin-top: 0px;
-}
-
 h3 {
     text-align: center;
     line-height: 1rem;
@@ -388,6 +371,11 @@ br {
 .font-medium {
     font-size: medium;
     font-weight: 400;
+}
+
+.font-large-sm-weight {
+    font-size: large;
+    font-weight: 300;
 }
 
 .font-md-small {
@@ -435,7 +423,7 @@ br {
 }
 
 #experience-section-end {
-    padding-bottom: 25%;
+    padding-bottom: 13%;
 }
 
 .underline {
@@ -462,30 +450,49 @@ br {
     transform-origin: 0 50%;
 }
 
-.social_link#linkedIn:hover {
+.social-link#linkedIn:hover {
     color: rgb(45, 100, 188);
 }
 
-.social_link#spotify:hover {
+.social-link#linkedIn-resume:hover {
+    color: rgb(45, 100, 188);
+}
+
+.social-link#linkedIn-resume {
+    text-decoration: none;
+
+}
+
+.social-link#spotify:hover {
     color: rgb(101, 212, 110);
 }
 
-.social_link#strava:hover {
+.social-link#strava:hover {
     color: rgb(233, 95, 42);
 }
 
-.social_links_container {
+.social-links-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-top: 5rem;
 }
 
-.index_footer {
+#social-links-container-resume {
+    margin-top: 0;
+    margin-bottom: 5rem;
+}
+
+.index-footer {
     margin-top: 5rem;
  }
 
-.social_link {
+#index-footer-resume {
+    margin-top: 0;
+    margin-bottom: 8rem;
+}
+
+.social-link {
     color: #000;
     text-decoration: underline;
  }
