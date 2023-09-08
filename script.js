@@ -1,10 +1,10 @@
-// function pause(X) => pause for X millisecond input
+// function pause(X) => pause for X milliseconds
 function pause(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-// function executeWordChange() => cycle words in index.html
-function executeWordChange() {
+// function cycleWords() => cycle words
+function cycleWords() {
     const words = document.querySelector(".animate-word").children,
     textOutTimer = 2800;
     
@@ -19,11 +19,7 @@ function executeWordChange() {
             words[idx].classList.add("change-word2");
         }, textOutTimer);
         
-        if(idx == words.length - 1) {
-            idx = 0;
-        } else {
-            idx++;
-        }
+        idx = idx == words.length - 1 ? 0 : idx + 1;
         
         setTimeout(changeWord, 2500);
     }  
@@ -31,8 +27,8 @@ function executeWordChange() {
     changeWord();
 }
 
-// function deleteName(X) => delete words located at html reference X
-async function deleteName(ref) {
+// function deleteWord(X) => delete words located at html reference X
+async function deleteWord(ref) {
     const sentence = $(ref).text();
     const words = sentence.split(" ");
 
@@ -50,8 +46,8 @@ async function deleteName(ref) {
     }
 }
 
-// function typeName(A, B, C) => type name A into html reference C. Remove it based on flag B
-async function typeName(name, remove, ref) {
+// function typeWord(A, B, C) => type word A into html reference B. Remove it based on flag C
+async function typeWord(name, ref, remove) {
     await pause(500);
     const letters = name.split("");
 
@@ -64,7 +60,7 @@ async function typeName(name, remove, ref) {
 
     if (remove == true) {
         await pause(1000);
-        deleteName(ref);
+        deleteWord(ref);
     } else {
         await pause(200);
         
@@ -73,7 +69,7 @@ async function typeName(name, remove, ref) {
         });
 
         if ($('body').is('#index')) {
-            executeWordChange();
+            cycleWords();
             // not-so-strict check to see if user is on computer vs. phone
             if (screen.orientation.type == 'landscape-primary') {
                 document.querySelector("body#index").classList.add("svg");
@@ -83,15 +79,15 @@ async function typeName(name, remove, ref) {
     }
 
     await pause(1000);
-    typeName("E-man", false, ".home-name");
+    typeWord("E-man", ".home-name", false);
 }
 
 $(document).ready(function() {
     if ($('body').is('#index')) {
-        typeName("Hey, I'm Emmanuel", true, ".home-name");
+        typeWord("Hey, I'm Emmanuel", ".home-name", true);
     }
     else if ($('body').is('#resume')) {
-        typeName("Resume", false, ".home-name");
+        typeWord("Resume", ".home-name", false);
     }
     else if ($('body').is('#about')) {
         if (screen.orientation.type == 'landscape-primary') {
