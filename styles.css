@@ -500,4 +500,9 @@ br {
  #spotify {
     padding-left: 2rem;
     padding-right: 2rem;
+    text-decoration: none;
+ }
+
+ #strava {
+    text-decoration: none;
  }
