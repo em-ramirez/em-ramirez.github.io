@@ -1,2 +1,5 @@
 .DS_store
 me.jpg
+.env
+node_modules
+.vercel

@@ -4,10 +4,10 @@
 }
 
 /* For seeing grid layout */
-/* * {
+* {
     box-sizing: border-box;
     border-style: solid;
-} */
+}
 
 html {
     font-size: 18px;
@@ -89,6 +89,10 @@ a {
 }
 
 a#nav-index {
+    margin-right: 0.8rem;
+}
+
+a#nav-resume {
     margin-right: 0.8rem;
 }
 
