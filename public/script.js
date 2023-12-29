@@ -59,7 +59,7 @@ async function typeWord(name, ref, remove) {
     }
 
     if (remove == true) {
-        await pause(1000);
+        await pause(500);
         deleteWord(ref);
     } else {
         await pause(200);
@@ -79,7 +79,71 @@ async function typeWord(name, ref, remove) {
     }
 
     await pause(1000);
-    typeWord("E-man", ".home-name", false);
+    typeWord("Eman", ".home-name", false);
+}
+
+const fetchImages = async () => {
+    try {
+        // const response = await fetch('http://localhost:3000/api/images');
+        const response = await fetch('/api/images');
+        var data = await response.json();
+
+        data2 = data.sort((a, b) => {
+            if (a.width > b.width) {
+                return -1;
+              }
+        });
+
+
+        renderImages(data2);
+    } catch(error) {
+        console.error('Error retrieving images: ', error);
+    }
+}
+
+const renderImages = (images) => {
+    const filmWrapper = document.getElementById('film-wrapper')
+
+    images.forEach((image, idx) => {
+        const wrapperDiv = document.createElement('div');
+        wrapperDiv.className = "image-item"
+        wrapperDiv.style.marginTop = '3rem';
+        wrapperDiv.style.float = 'left';
+
+        const imgElement = document.createElement('img');
+        imgElement.className = "image";
+        imgElement.style.objectFit = 'cover';
+        imgElement.alt = image.context.custom.alt
+        imgElement.src = image.secure_url;
+
+        if (idx == images.length - 1) {
+            imgElement.style.paddingBottom = "10%";
+        }
+
+        console.log("image width: ", image.width);
+
+        if (image.width < 1545) {
+            imgElement.classList.add("portrait");
+        } else {
+            imgElement.classList.add("landscape");
+        }
+
+        const imgDetails = document.createElement('div');
+        imgDetails.className = "image-details";
+
+        const imgLoc = document.createElement('p');
+        imgLoc.textContent = image.context.custom.Location;
+
+        const imgDate = document.createElement('p');
+        imgDate.textContent = image.context.custom.Date;
+
+        imgDetails.appendChild(imgLoc);
+        imgDetails.appendChild(imgDate);
+
+        wrapperDiv.appendChild(imgElement);
+        wrapperDiv.appendChild(imgDetails);
+        filmWrapper.appendChild(wrapperDiv);
+    });
 }
 
 $(document).ready(function() {
@@ -89,10 +153,9 @@ $(document).ready(function() {
     else if ($('body').is('#resume')) {
         typeWord("Resume", ".home-name", false);
     }
-    else if ($('body').is('#about')) {
-        if (screen.orientation.type == 'landscape-primary') {
-            document.querySelector("#about").classList.add("svg");
-        }
+    else if ($('body').is('#film')) {
+        typeWord("Film", ".home-name", false);
+        fetchImages();
     }
 });
   

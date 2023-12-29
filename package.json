@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "cloudinary": "^1.41.1",
+    "express": "^4.18.2",
+    "firebase": "^10.7.1"
+  },
+  "name": "backend",
+  "description": "This is my website",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/em-ramirez/emra711.github.io.git"
+  },
+  "author": "Emmanuel Ramirez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/em-ramirez/emra711.github.io/issues"
+  },
+  "homepage": "https://github.com/em-ramirez/emra711.github.io#readme"
+}
