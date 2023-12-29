@@ -18,8 +18,9 @@ cloudinary.config({
 // Define a route to fetch images from Cloudinary
 app.get('/api/images', async (req, res) => {
     try {
-        const cloudinaryResponse = await cloudinary.api.resources({type: 'upload', max_results: 4, context: true})
+        const cloudinaryResponse = await cloudinary.api.resources({type: 'upload', max_results: 10, context: true})
         .then();
+
         res.json(cloudinaryResponse.resources);
     } catch (error) {
         console.error('Error fetching images:', error);
