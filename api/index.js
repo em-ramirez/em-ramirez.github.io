@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const cloudinary = require('cloudinary').v2;
 
 const app = express();
@@ -18,9 +19,10 @@ cloudinary.config({
 // Define a route to fetch images from Cloudinary
 app.get('/api/images', async (req, res) => {
     try {
+        console.log("fetching images....");
         const cloudinaryResponse = await cloudinary.api.resources({type: 'upload', max_results: 10, context: true})
         .then();
-
+        console.log("Fetched images succeed.");
         res.json(cloudinaryResponse.resources);
     } catch (error) {
         console.error('Error fetching images:', error);

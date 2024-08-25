@@ -86,6 +86,7 @@ const fetchImages = async () => {
     try {
         // const response = await fetch('http://localhost:3000/api/images');
         const response = await fetch('/api/images');
+        console.log("fetched images...");
         var data = await response.json();
 
         data2 = data.sort((a, b) => {
