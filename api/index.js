@@ -20,7 +20,7 @@ cloudinary.config({
 app.get('/api/images', async (req, res) => {
     try {
         console.log("fetching images....");
-        const cloudinaryResponse = await cloudinary.api.resources({type: 'upload', max_results: 10, context: true})
+        const cloudinaryResponse = await cloudinary.api.resources({type: 'upload', max_results: 20, context: true})
         .then();
         console.log("Fetched images succeed.");
         res.json(cloudinaryResponse.resources);

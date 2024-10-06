@@ -89,17 +89,30 @@ const fetchImages = async () => {
         console.log("fetched images...");
         var data = await response.json();
 
-        data2 = data.sort((a, b) => {
+        // Shuffle the array of images to get random order
+        const shuffledImages = shuffleArray(data);
+        // Get the first 10 images after shuffling
+        const randomImages = shuffledImages.slice(0, 10);
+
+        images = randomImages.sort((a, b) => {
             if (a.width > b.width) {
                 return -1;
               }
         });
 
-
-        renderImages(data2);
+        renderImages(images);
     } catch(error) {
         console.error('Error retrieving images: ', error);
     }
+}
+
+// Fisher-Yates Shuffle Algorithm to randomize an array
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];  // Swap elements
+    }
+    return array;
 }
 
 const renderImages = (images) => {
